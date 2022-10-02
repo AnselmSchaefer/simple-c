@@ -17,16 +17,18 @@ main() {
     float amount;
     printf("\n\tEURO CALCULATOR\n");
     printf("\n1 DM --> EURO\n2 EURO --> DM");
-    printf("\n\nIhre Wahl: ");
+    printf("\n\nYour Choice: ");
     scanf("%i",&choice);
     if(choice == 1) {
         printf("Please enter the amount in DM: ");
         scanf("%f",&amount);
         printf("\n%.2f DM are %.2f EUROs", amount, amount*0.51129);
     }
-    if(choice == 2) {
+    else if(choice == 2) {
         printf("Please enter the amount in Euros: ");
         scanf("%f",&amount);
         printf("\n%.2f EUROs are %.2f DM", amount, amount*1.95583);
     }
-}
+    else
+        printf("\nInvalid Input");
+} 
